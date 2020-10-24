@@ -1,0 +1,56 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>COMENTARIO DE CLIENTES COM BANCO DE DADOS E PHP</title>
+<script type="text/javascript">
+function validaCampo()
+{
+if(document.cadastro.nome.value=="")
+	{
+	alert("O Campo nome é obrigatório!");
+	return false;
+	}
+else
+	if(document.cadastro.email.value=="")
+	{
+	alert("O Campo email é obrigatório!");
+	return false;
+	}
+else
+if(document.cadastro.cometario.value=="")
+	{
+	alert("O Campo email é obrigatório!");
+	return false;
+return true;
+}
+<!-- Fim do JavaScript para validar campos obrigatorios -->
+</script>
+</head>
+
+<body>
+<form id="cadastro" name="cadastro" method="post" action="cadastro.php" onsubmit="return validaCampo(); return false;">
+  <table width="625" border="0">
+    <tr>
+      <td width="69">Nome:</td>
+      <td width="546"><input name="nome" type="text" id="nome" size="70" maxlength="60" />
+        <span class="style1">*</span></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><input name="email" type="text" id="email" size="70" maxlength="60" />
+      <span class="style1">*</span></td>
+    </tr>
+    <tr>
+      <td>Comentario:</td>
+      <td width="546"><input name="nome" type="text" id="comentatio" size="70" maxlength="60" />
+        <span class="style1">*</span></td>
+    </tr>
+      <td colspan="2"><p>
+        <input name="cadastrar" type="submit" id="cadastrar" value="Concluir meu comentario." /> 
+        <br />
+          <input name="limpar" type="reset" id="limpar" value="Limpar Campos preenchidos!" />
+          <br />
+          <span class="style1">* Campos com * sao obrigatorios. </span></p>
+  </table>
+</form>
+</body>
+</html>
